@@ -1,5 +1,5 @@
 ## Blockchain structure
-	`Blockchain data structure`
+`Blockchain data structure`
 
 ```java.js
   //'Constructor' function...data object 
