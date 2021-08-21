@@ -246,3 +246,51 @@ module.exports = Blockchain;
 
 ![BlockchainProofW01D02](https://user-images.githubusercontent.com/88910721/130330929-c81f1c37-5723-49c3-84e3-9c9571017c2e.PNG)
 
+
+'testProof.js`
+
+```java.js
+
+// "Anybody can code,just write code that anyone can understand".
+
+//1. Call the Blockchain Proof code
+const Blockchain = require('./blockchainProof.js');
+
+//2. Name or create our "brand" or instance for our data structure (modules)
+const rachcoin = new Blockchain(); 
+
+//3. Create your blocks: name.createNewBlock(nonce, previousBlockHash, hash)
+rachcoin.createNewBlock(113277545, 'Driscolls_Services', 'Driscolls_Operations');
+rachcoin.createNewBlock(107718716, 'Bemis_Hold', 'Bemis_Active');
+
+//4. Create your transactions: name.createNewTransaction(ammount, sender, receiver)
+rachcoin.createNewTransaction(200000, 'SENDSERVICES', 'RECEIVEOPERATIONS');
+rachcoin.createNewTransaction(50000, 'SENDHOLD', 'RECEIVEACTIVE');
+
+//5. Identify the Hash
+//5.1. Define the Previous Block Hash we'll be following, rachcoin.previousBlockHash SHA-256 Hash
+const previousBlockHash = '8f1288b4a9817dcd091d1f0b09d7531c37bb10760e155f1243d9616b0dbba79c';
+//5.2. Create printing structure and parameters of the new block
+const currentBlockData = [{
+        "Amount": 200000,
+        "Sender": "SENDSERVICES",
+        "Recipient": "RECEIVEOPERATIONS",
+    },
+    {
+        "amount": 50000,
+        "sender": "SENDHOLD",
+        "recipient": "RECEIVEACTIVE",
+    }
+];
+
+//6. Now, we are not going to define the nonce, we are looking for it. 
+let nonce = rachcoin.proofOfWork(previousBlockHash, currentBlockData);
+//View the noce with some text before
+console.log('nonce from Proof of Work : ' + nonce);
+//7. View the Hash related to the nonce above
+console.log(rachcoin.hashBlock(previousBlockHash, currentBlockData, nonce));
+//8. View the blockchain 
+console.log(rachcoin);
+
+```
+> Terminal node dev/testProof.js
