@@ -3,6 +3,11 @@
 ## Support materials.
 • **Video 1.** But how does bitcoin actually work?
 https://www.youtube.com/watch?v=bBC-nXj3Ng4&t=1s
+![W00P01](https://user-images.githubusercontent.com/88910721/130321501-e58a9a07-1284-4e7a-8ee9-cd3bc290c1c8.jpg)![W00P02](https://user-images.githubusercontent.com/88910721/130321508-644b554e-910f-4e00-afa1-0fff955bfd76.jpg)
+![W00P03](https://user-images.githubusercontent.com/88910721/130321513-5c1fe301-3a1d-4cc1-bdc4-8de651c6d6c7.jpg)
+![W00P04](https://user-images.githubusercontent.com/88910721/130321516-c92f0cbe-5524-4003-897b-875ad1718c4c.jpg)
+
+
 
 • **Página de conceptos:** https://gist.github.com/barrycumbie/55b9a96a67cd7a720026b971522c2440
 
