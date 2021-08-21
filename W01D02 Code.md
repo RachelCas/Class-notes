@@ -139,7 +139,10 @@ const nonce = 100;
 console.log(rachcoin.hashBlock(previousBlockHash, currentBlockData, nonce));
 
 ```
-> Terminal npm dev/testHash.js
+> Terminal node dev/testHash.js
+
+![TestHashW01D02](https://user-images.githubusercontent.com/88910721/130329603-5b580e58-ae05-40a5-9da2-05f24565b81d.PNG)
+
 
 
 
