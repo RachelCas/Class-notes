@@ -232,10 +232,11 @@ Blockchain.prototype.proofOfWork = function(previousBlockHash, currentBlockData)
     //6.2. Create the Hash running from zero too.
     let hash = this.hashBlock(previousBlockHash, currentBlockData, nonce);
     //6.3. Execute the code {while the first four digits of the hash are NOT 000} while this condition is true
-    while (hash.substring(0, 4) !== '000') {
+    while (hash.substring(0, 4) !== '0000') {
         nonce++; // nonce = nonce + 1... 0 + 1 = 1. 1+1 = 2... 
         hash = this.hashBlock(previousBlockHash, currentBlockData, nonce);      
     }
+
     //6.3. The return statement stops the execution of a function and returns a the Nonce value.
     return nonce;
 };
@@ -285,12 +286,15 @@ const currentBlockData = [{
 
 //6. Now, we are not going to define the nonce, we are looking for it. 
 let nonce = rachcoin.proofOfWork(previousBlockHash, currentBlockData);
-//View the noce with some text before
+//View the nonce with some text before
 console.log('nonce from Proof of Work : ' + nonce);
 //7. View the Hash related to the nonce above
 console.log(rachcoin.hashBlock(previousBlockHash, currentBlockData, nonce));
 //8. View the blockchain 
 console.log(rachcoin);
 
+
 ```
 > Terminal node dev/testProof.js
+
+![TestProofW01D02](https://user-images.githubusercontent.com/88910721/130331531-67187c28-57e5-46e8-a8a8-133b0792b091.PNG)
